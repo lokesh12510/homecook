@@ -8,6 +8,7 @@ export const DefaultTheme = createTheme({
     },
     secondary: {
       main: "#F8B602",
+      dark: "#FB9209",
     },
   },
 });

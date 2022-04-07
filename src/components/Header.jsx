@@ -7,7 +7,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 
 // style
-import styled from "@emotion/styled";
 import StaticImages from "../constants/Images";
 import {
   Drawer,
@@ -18,6 +17,7 @@ import {
   Stack,
 } from "@mui/material";
 import { PrimaryBtn, TextBtn } from "../constants/Styles";
+import styled from "styled-components";
 
 const pages = [
   {
@@ -68,7 +68,11 @@ const Header = () => {
   const displayDesktop = () => {
     return (
       <Toolbar>
-        <img src={StaticImages.LogoLight} alt="logo" />
+        <img
+          src={StaticImages.LogoLight}
+          alt="logo"
+          style={{ marginRight: 150 }}
+        />
         <Box
           sx={{
             flexGrow: 1,
@@ -184,11 +188,10 @@ export default Header;
 
 const TopBar = styled(AppBar)`
   background-color: transparent;
-  @media (max-width: 600px) {
-    & .MuiToolbar-root {
-      padding-left: 0;
-      padding-right: 0;
-    }
+
+  & .MuiToolbar-root {
+    padding-left: 0;
+    padding-right: 0;
   }
 `;
 

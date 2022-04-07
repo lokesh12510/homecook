@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import { Box, Button, IconButton, Tab, Typography } from "@mui/material";
 import styled from "styled-components";
 import { DefaultTheme } from "./Theme";
 
@@ -15,4 +15,30 @@ export const PrimaryBtn = styled(Button)`
 
 export const TextBtn = styled(Button)`
   ${({ active }) => active && `color:${secondary.main}`};
+`;
+
+export const IconBtn = styled(IconButton)`
+  object-fit: contain;
+  &:hover {
+    color: ${secondary.dark};
+  }
+`;
+
+export const SectionBox = styled(Box)`
+  padding: 15px;
+`;
+
+export const SectionHeader = styled(Typography)`
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 14px;
+  margin-left: 40px;
+`;
+
+export const TabBtn = styled(Tab)`
+  & .Mui-selected: {
+    background-color: #fff;
+    text-align: center;
+  }
 `;
